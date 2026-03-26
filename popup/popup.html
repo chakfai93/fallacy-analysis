@@ -9,11 +9,37 @@
 <body>
     <div class="container">
         <h1>🎯 謬誤分析工具</h1>
-        <textarea id="textInput" placeholder="輸入文本..." rows="6"></textarea>
-        <button id="analyzeBtn" class="btn">🔍 分析</button>
-        <div id="results" class="results"></div>
-        <button id="clearBtn" class="btn-small">清除</button>
+        
+        <div class="section">
+            <h2>網頁內容</h2>
+            <textarea id="pageContent" placeholder="自動提取網頁內容..." rows="6" readonly></textarea>
+            <button id="analyzeBtn" class="btn">🔍 分析謬���</button>
+            <button id="manualBtn" class="btn-secondary">✏️ 手動輸入</button>
+        </div>
+        
+        <div class="section">
+            <h2>分析結果</h2>
+            <div id="results" class="results">
+                <p class="placeholder">點擊「分析謬誤」開始...</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <button id="clearBtn" class="btn-small">🗑️ 清除</button>
+        </div>
     </div>
+
+    <div id="manualModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>手動輸入文本</h2>
+            <textarea id="manualInput" placeholder="輸入要分析的文本..." rows="8"></textarea>
+            <div class="modal-buttons">
+                <button id="submitBtn" class="btn">提交分析</button>
+                <button id="closeBtn" class="btn-secondary">取消</button>
+            </div>
+        </div>
+    </div>
+    
     <script src="popup.js"></script>
 </body>
 </html>
