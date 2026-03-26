@@ -1,0 +1,1 @@
+{\n  \"api\": {\n    \"baseUrl\": \"https://api.example.com\",\n    \"timeout\": 5000\n  },\n  \"ui\": {\n    \"theme\": \"dark\",\n    \"language\": \"en\"\n  }\n}
